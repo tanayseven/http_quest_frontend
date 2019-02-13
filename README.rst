@@ -25,15 +25,17 @@ To build all the dependencies
 To start running application in development mode using watcher
 
 .. code-block:: bash
-    yarn dev # normal server
-    yarn dev:dashboard # with dashboard
-    yarn dev:awesome # with awesome typescript loader
+    yarn start
 
 To create a production build
 
 .. code-block:: bash
-    yarn clean # in order to clean the previous build
-    yarn build # generate a new build
+    yarn build:prod
+
+To create a dev build
+
+.. code-block:: bash
+    yarn build:dev
 
 To run all the tests
 

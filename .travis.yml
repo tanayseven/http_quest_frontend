@@ -9,5 +9,5 @@ install:
   - yarn install -D
 
 script:
-  - yarn build
+  - yarn build:prod
   - yarn test --coverage --coverageReporters=text-lcov | coveralls
