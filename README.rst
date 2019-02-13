@@ -54,7 +54,7 @@ Technologies used
 Source of repository
 ====================
 
-This repository is initialized form `here <https://github.com/piotrwitek/react-redux-typescript-webpack-starter>`_ all the credit goes to him
+This repository is initialized form `here <https://github.com/Microsoft/TypeScript-React-Redux-Starter>`_ all the credit of setting this up goes to them
 
 LICENSE
 =======
