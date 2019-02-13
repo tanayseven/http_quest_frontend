@@ -1,0 +1,13 @@
+language: node_js
+
+cache: yarn
+
+env:
+  - CI=true
+
+install:
+  - yarn install -D
+
+script:
+  - yarn build
+  - yarn test --coverage --coverageReporters=text-lcov | coveralls
