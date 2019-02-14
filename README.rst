@@ -15,7 +15,7 @@ Frontend for HTTP Quest
 Setup of the frontend
 ---------------------
 
-It is recommended to use `Yarn <https://yarnpkg.com/>`_ to build this project please make sure you have Yarn [installed](https://yarnpkg.com/en/docs/install)
+It is recommended to use `Yarn <https://yarnpkg.com/>`_ to build this project please make sure you have Yarn `installed <https://yarnpkg.com/en/docs/install>`_
 
 To build all the dependencies
 
