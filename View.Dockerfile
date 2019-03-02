@@ -2,7 +2,7 @@ FROM node:8 as dev
 WORKDIR /app
 ADD . /app
 RUN export CI=true \
-   && yarn install \
+   && yarn install -D \
    && yarn test
 CMD yarn build:dev \
    && yarn start
