@@ -1,7 +1,7 @@
 FROM node:8 as dev
 WORKDIR /app
 ADD . /app
-RUN yarn global add webpack
+RUN yarn global add webpack webpack-dev-server
 RUN export CI=true \
    && yarn install -D \
    && yarn test
