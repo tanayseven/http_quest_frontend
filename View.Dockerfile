@@ -1,12 +1,12 @@
 FROM node:8 as dev
 WORKDIR /app
-ADD ./view/ /app
+ADD . /app
 RUN export CI=true \
    && yarn install \
    && yarn test
-CMD yarn build \
+CMD yarn build:dev \
    && yarn start
 
 FROM nginx:1.15 as prod
-COPY ./view/build/ /usr/share/nginx/html/
+COPY ./build/ /usr/share/nginx/html/
 
