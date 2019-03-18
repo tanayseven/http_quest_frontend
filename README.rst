@@ -7,7 +7,7 @@
 .. image:: https://api.codeclimate.com/v1/badges/446f297a590faab72631/maintainability
    :target: https://codeclimate.com/github/tanayseven/http_quest_frontend/maintainability
    :alt: Maintainability
-   
+
 
 Frontend for HTTP Quest
 =======================
@@ -15,32 +15,30 @@ Frontend for HTTP Quest
 Setup of the frontend
 ---------------------
 
-It is recommended to use `Yarn <https://yarnpkg.com/>`_ to build this project please make sure you have Yarn `installed <https://yarnpkg.com/en/docs/install>`_
-
 To build all the dependencies
 
 .. code-block:: bash
-    yarn install
+    npm i
 
 To start running application in development mode using watcher
 
 .. code-block:: bash
-    yarn start
+    # Not yet available
 
 To create a production build
 
 .. code-block:: bash
-    yarn build:prod
+    # Not yet available
 
 To create a dev build
 
 .. code-block:: bash
-    yarn build:dev
+    npm run build
 
 To run all the tests
 
 .. code-block:: bash
-    yarn test
+    npm test
 
 Technologies used
 =================
@@ -50,11 +48,6 @@ Technologies used
     3. Redux
     4. Jest
     5. Enzyme
-
-Source of repository
-====================
-
-This repository is initialized form `here <https://github.com/Microsoft/TypeScript-React-Redux-Starter>`_ all the credit of setting this up goes to them
 
 LICENSE
 =======

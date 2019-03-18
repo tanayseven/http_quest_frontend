@@ -1,13 +1,8 @@
 language: node_js
 
-cache: yarn
-
-env:
-  - CI=true
-
 install:
-  - yarn install -D
+  - npm i -D
 
 script:
-  - yarn build:dev
-  - yarn test --coverage --coverageReporters=text-lcov | coveralls
+  - npm run build
+  - npm test --coverage --coverageReporters=text-lcov | coveralls

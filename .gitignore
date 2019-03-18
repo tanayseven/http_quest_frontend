@@ -4,3 +4,4 @@ src/**/*.js
 *.iml
 .idea
 node_modules
+build
