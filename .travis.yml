@@ -8,4 +8,4 @@ env:
 
 script:
   - npm run build
-  - npm test --coverage --coverageReporters=text-lcov | coveralls
+  - jest --coverage --coverageReporters=text-lcov | coveralls
