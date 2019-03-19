@@ -3,6 +3,9 @@ language: node_js
 install:
   - npm i -D
 
+env:
+  - NODE_ENV=test
+
 script:
   - npm run build
   - npm test --coverage --coverageReporters=text-lcov | coveralls
