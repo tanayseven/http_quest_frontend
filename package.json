@@ -8,7 +8,10 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "test": "jest"
+    "build-watch": "echo this feature is yet to be implemented",
+    "test": "jest",
+    "test-watch": "echo this feature is yet to be implemented",
+    "stub-server": "json-server --watch stub-server/index.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,6 +30,7 @@
     "enzyme-adapter-react-16": "^1.10.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.1.0",
+    "json-server": "^0.14.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "ts-jest": "^24.0.0",
