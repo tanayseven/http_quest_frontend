@@ -1,0 +1,40 @@
+version: '3.4'
+services:
+  stub-server:
+    build:
+      context: .
+      target: build
+    command:
+      - npm run stub-server
+    ports:
+      - '3000:3000'
+    container_name: http_quest_stub_server
+    volumes:
+      - .:/app
+  build:
+    build:
+      context: .
+      target: build
+    command:
+      - npm run build
+    ports:
+      - '8000:8000'
+    container_name: http_quest_build
+    volumes:
+      - .:/app
+    depends_on:
+      - stub-server
+  app:
+    build:
+      context: .
+      target: prod
+    command:
+      - npm run build-watch
+    ports:
+      - '8000:80'
+    container_name: http_quest_app
+    volumes:
+      - ./view/build/:/usr/share/nginx/html/
+    depends_on:
+      - stub-server
+      - build
