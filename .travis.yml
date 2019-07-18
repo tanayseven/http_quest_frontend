@@ -1,8 +1,11 @@
 language: node_js
 
+env:
+  - CI=true
+
 install:
   - npm i -D
 
 script:
   - npm run build
-  - jest --coverage --coverageReporters=text-lcov | coveralls
+  - npm test -- --coverage --ci --coverageReporters=text-lcov | coveralls
