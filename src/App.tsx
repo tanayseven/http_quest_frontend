@@ -1,6 +1,7 @@
 import React from 'react'
 import {HashRouter, Route} from 'react-router-dom'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {HomePage, LoginPage} from "./pages";
 
 const App: React.FC = () => {
@@ -9,6 +10,7 @@ const App: React.FC = () => {
         <HashRouter hashType='hashbang'>
             <Route exact path='/' component={LoginPage} />
             <Route path='/home' component={HomePage} />
+
         </HashRouter>
       </div>
   )
