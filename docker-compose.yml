@@ -19,11 +19,18 @@ services:
       - npm run build
     ports:
       - '8000:8000'
-    container_name: http_quest_build
+    container_name: http_quest_frontend_build
     volumes:
       - .:/app
     depends_on:
       - stub-server
+  test:
+    build:
+      context: .
+      target: test
+    container_name: http_quest_frontend_test
+    volumes:
+      - ./:/app/
   app:
     build:
       context: .
