@@ -1,10 +1,10 @@
-language: node_js
+language: python
 
 env:
   - CI=true
 
 install:
-  - npm i -D
+  - pip install awscli
 
 jobs:
   include:
