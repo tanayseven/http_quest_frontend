@@ -32,7 +32,8 @@
     "test": "react-scripts test",
     "lint": "eslint -c eslintrc.js src/**/*.ts src/**/*.tsx",
     "lint-fix": "npm run lint -- --fix",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coveralls": "npm run coveralls"
   },
   "browserslist": {
     "production": [

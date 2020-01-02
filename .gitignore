@@ -14,6 +14,7 @@ logs
 
 # testing
 /coverage
+.coverage
 
 # production
 /build

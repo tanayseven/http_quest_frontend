@@ -3,14 +3,13 @@ WORKDIR /app
 ADD . /app
 RUN export CI=true \
     && npm install \
-    && npm run build \
+    && npm run build
 
 FROM build as test
 WORKDIR /app
 ADD . /app
-RUN export CI=true \
-    && npm install \
-    && npm test -- --coverage --ci --coverageReporters=text-lcov > .coverage
+ENV CI=true
+RUN npm install -D
 
 
 FROM nginx:1.15 as prod

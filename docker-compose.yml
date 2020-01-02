@@ -31,6 +31,19 @@ services:
     container_name: http_quest_frontend_test
     volumes:
       - ./:/app/
+    command: npm test
+    depends_on:
+      - build
+  publish-coverage:
+    build:
+      context: .
+      target: test
+    container_name: http_quest_frontend_test_publish
+    volumes:
+      - ./:/app/
+    command: npm run coveralls .coverage
+    depends_on:
+      - build
   app:
     build:
       context: .
