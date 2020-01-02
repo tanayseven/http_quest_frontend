@@ -9,15 +9,13 @@ install:
 jobs:
   include:
     - stage: Test
-      script: ./shell-scripts/test.sh
-    - stage: Docker image build and publish
-      script: ./shell-scripts/docker_build.sh
+      script: ./shell-scripts/run-tests.sh
+    - stage: Build docker image
+      script: ./shell-scripts/build-docker-image.sh
     - stage: Deploy to Heroku
-      script: ./shell-scripts/deploy_heroku.sh
-    - stage: Migrate database
-      script: ./shell-scripts/migrate_database.sh
+      script: ./shell-scripts/deploy-to-heroku.sh
     - stage: Publish code coverage
-      script: ./shell-scripts/publish_coverage.sh
+      script: ./shell-scripts/publish-code-coverage.sh
 
 script:
   - npm run build
