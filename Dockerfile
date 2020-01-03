@@ -4,6 +4,7 @@ ADD . /app
 RUN export CI=true \
     && npm install \
     && npm run build
+CMD npm run build
 
 FROM build as test
 WORKDIR /app

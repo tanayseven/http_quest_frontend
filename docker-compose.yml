@@ -15,8 +15,6 @@ services:
     build:
       context: .
       target: build
-    command:
-      - npm run build
     ports:
       - '8000:8000'
     container_name: http_quest_frontend_build
@@ -54,7 +52,7 @@ services:
       - '8000:80'
     container_name: http_quest_app
     volumes:
-      - ./view/build/:/usr/share/nginx/html/
+      - ./build/:/usr/share/nginx/html/
     depends_on:
       - stub-server
       - build
