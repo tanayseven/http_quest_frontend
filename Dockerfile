@@ -10,7 +10,7 @@ FROM build as test
 WORKDIR /app
 ADD . /app
 ENV CI=true
-RUN npm install -D
+RUN npm i
 
 
 FROM nginx:1.15 as prod
