@@ -10,8 +10,9 @@ FROM build as test
 WORKDIR /app
 ADD . /app
 ENV CI=true
-RUN npm config set -g production false
 RUN npm i
+RUN npm i -g react-scripts@3.3
+CMD npm test
 
 
 FROM nginx:1.15 as prod

@@ -29,7 +29,6 @@ services:
     container_name: http_quest_frontend_test
     volumes:
       - ./:/app/
-    command: npm test
     depends_on:
       - build
   publish-coverage:
