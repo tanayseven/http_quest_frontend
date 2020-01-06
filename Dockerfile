@@ -10,6 +10,7 @@ FROM build as test
 WORKDIR /app
 ADD . /app
 ENV CI=true
+RUN npm config set -g production false
 RUN npm i
 
 
