@@ -11,7 +11,8 @@ WORKDIR /app
 ADD . /app
 ENV CI=true
 RUN npm i
-RUN npm i -g react-scripts@3.3
+ENV PATH /app/node_modules/.bin/:$PATH
+RUN ls -lart
 CMD npm test
 
 
