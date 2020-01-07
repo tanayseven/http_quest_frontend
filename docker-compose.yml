@@ -9,8 +9,6 @@ services:
     ports:
       - '3000:3000'
     container_name: http_quest_stub_server
-    volumes:
-      - .:/app
   build:
     build:
       context: .
@@ -19,7 +17,7 @@ services:
       - '8000:8000'
     container_name: http_quest_frontend_build
     volumes:
-      - .:/app
+      - ./build/:/app/build
     depends_on:
       - stub-server
   test:
@@ -37,7 +35,7 @@ services:
       target: test
     container_name: http_quest_frontend_test_publish
     volumes:
-      - ./:/app/
+      - .coverage:/app/.coverage
     command: npm run coveralls .coverage
     depends_on:
       - build
