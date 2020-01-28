@@ -48,6 +48,8 @@ services:
     ports:
       - '8000:80'
     container_name: http_quest_app
+    environment:
+      - PORT=80
     volumes:
       - ./build/:/usr/share/nginx/html/
     depends_on:
